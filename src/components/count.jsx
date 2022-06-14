@@ -19,7 +19,11 @@ function Count() {
 
   return (
     <div>
-      {count && <p>{count.value}</p>}
+      {count.value ? (
+        <h1>The current count is: {count.value}</h1>
+      ) : (
+        <h1>Try Clicking the button to get the count</h1>
+      )}
       <button onClick={() => setCheckCount(true)}>get the count</button>
     </div>
   );
